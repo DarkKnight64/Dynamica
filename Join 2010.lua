@@ -52,7 +52,7 @@ client.ConnectionAccepted:connect(function(ip,replicator)
 		co = coroutine.create(
 		   function ()
 		     while player.Character == nil do
-		     	wait(1)
+		     	wait(1) --Wait for character to actually exist in the world
 		     end
 		game:ClearMessage()
 		coroutine.resume(co2)
