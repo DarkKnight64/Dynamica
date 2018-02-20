@@ -1,10 +1,11 @@
-settings().Rendering.FrameRateManager = 2
-settings().Network.SendRate = 30
-settings().Network.ReceiveRate = 60
-settings().Network.PhysicsReplicationUpdateRate = 30000
-settings().Network.PhysicsReceiveDelayFactor = 0
-settings().Network.PhysicsReliability = 4
-settings().Network.PhysicsSend = 1
+settings().Rendering.FrameRateManager = 2 --Sets to no framerate manager
+settings().Network.SendRate = 30 --Sets to default send rate
+settings().Network.ReceiveRate = 60 --Sets to default recieve rate
+settings().Network.PhysicsReplicationUpdateRate = 30000 --Makes physics update faster, levels load way faster
+settings().Network.PhysicsReceiveDelayFactor = 0 --Probably a placebo but i feel this made it run with less input lag
+settings().Network.PhysicsReliability = 4 --Sets it to RELIABLE-SEQUENCED, Incredibly great physics send method for 08, practically no input lag with realtime physics
+--Also prevents the annoying seat bug that so often occurs in december 08 (where your character gets 20 seconds of input lag after sitting)
+settings().Network.PhysicsSend = 1 --Sets it to RoundRobin physics, a must for 08, otherwise crashing is imminent
 local name = "" --Set the name here using PHP or another thing
 local ip = "" --Set the IP
 local port = 0--Set the port
